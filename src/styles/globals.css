@@ -55,7 +55,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground lg:text-base text-sm;
+    @apply bg-background text-foreground;
   }
   header::before {
     content: "";

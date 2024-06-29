@@ -19,8 +19,8 @@ const Section: FC<SectionProps> = ({
                 height={500}
             /> */}
             <div className="container min-h-screen space-y-10">
-                <div className="lg:mb-20 mb-10">
-                    <h1 className="font-semibold text-center leading-normal">{title}</h1>
+                <div className="lg:mb-20 mb-10 space-y-5">
+                    <h1 className="font-semibold lg:text-2xl text-xl text-center">{title}</h1>
                     <p className="text-center lg:text-xl text-lg text-primary">{description}</p>
                 </div>
                 {children}

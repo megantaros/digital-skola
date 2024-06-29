@@ -7,13 +7,13 @@ const Hero = () => {
             <div className="container flex items-center justify-center min-h-screen">
                 <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-10 animate-fade-up">
                     <div className="space-y-10 lg:order-first order-last">
-                        <h6 className="text-xl font-semibold">
+                        <h6 className="text-2xl font-semibold">
                             Selamat Datang di
                         </h6>
                         <h1 className="lg:text-5xl text-4xl font-bold m-0">
                             <span className="text-primary">Digital Marketing</span> Job Guarantee Bootcamp
                         </h1>
-                        <p className="text-gray-600 text-lg">
+                        <p className="text-gray-600 text-xl">
                             Raih karir impian dengan pelatihan intensif dan eksklusif bersama para high-achievers dengan jaminan 100% uang kembali.
                         </p>
                         <p className="font-semibold text-lg">

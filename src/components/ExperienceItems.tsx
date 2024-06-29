@@ -19,7 +19,7 @@ const ExperienceItems: FC<ExperienceItemsProps> = ({ data }) => {
     <Swiper dots={false} autoplay={true}>
       {data?.map((_, index) => (
         <div key={index} className="p-4">
-          <Card>
+          <Card className="border-none">
             <CardHeader>
               <div className="flex items-center gap-5">
                 <Avatar className="w-14 h-14">

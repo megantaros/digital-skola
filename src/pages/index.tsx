@@ -33,7 +33,7 @@ export default function Home({
         >
           <ExperienceItems data={experiences} />
           <div className="flex justify-center">
-            <Button size={'lg'}>Lihat Semua Pengalaman Alumni</Button>
+            <Button size={'lg'} variant={`default`} className="text-lg p-7">Lihat Semua Pengalaman Alumni</Button>
           </div>
         </Section>
         <Section
