@@ -1,10 +1,16 @@
 import React, { memo } from 'react'
 import Image from "next/image";
 import { Quicksand } from "next/font/google";
+import { useTheme } from 'next-themes';
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
 const Hero = () => {
+
+    const { theme } = useTheme();
+
+    console.log(theme);
+
     return (
         <header className="lg:pt-14 pt-28 lg:pb-0 pb-10 relative overflow-hidden">
             <div className="container flex items-center justify-center min-h-screen">
@@ -24,14 +30,14 @@ const Hero = () => {
                         </p>
                         <div className="flex items-center lg:justify-start justify-center gap-10">
                             <Image
-                                src="/images/brands/bukalapak.png"
+                                src={`${theme === 'dark' ? '/images/brands/bukalapak-dark.png' : '/images/brands/bukalapak.png'}`}
                                 className="lg:h-[30px] h-[25px] w-auto hover:scale-105 duration-500"
                                 alt="Logo Bukalapak"
                                 width={250}
                                 height={250}
                             />
                             <Image
-                                src="/images/brands/gojek.png"
+                                src={`${theme === 'dark' ? '/images/brands/gojek-dark.png' : '/images/brands/gojek.png'}`}
                                 className="lg:h-[30px] h-[25px] w-auto hover:scale-105 duration-500"
                                 alt="Logo Gojek"
                                 width={150}
