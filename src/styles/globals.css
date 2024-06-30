@@ -55,7 +55,28 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-xs;
+  }
+  h1 {
+    @apply font-bold lg:text-4xl text-3xl !important;
+  }
+  h2 {
+    @apply font-bold lg:text-2xl text-xl;
+  }
+  h3 {
+    @apply font-bold lg:text-xl text-lg;
+  }
+  h4 {
+    @apply font-bold lg:text-lg text-base;
+  }
+  h5 {
+    @apply font-bold lg:text-base text-sm;
+  }
+  h6 {
+    @apply font-bold lg:text-sm text-xs;
+  }
+  p {
+    @apply lg:text-sm text-xs;
   }
   header::before {
     content: "";
@@ -64,8 +85,5 @@
   header::after {
     content: "";
     @apply h-96 w-96 bg-blue-400 absolute -top-10 -left-20 rounded-full bg-opacity-10 blur-xl z-0;
-  }
-  .slick-dots li.slick-active button:before {
-    color: orange !important;
   }
 }

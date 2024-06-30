@@ -1,8 +1,8 @@
 export interface SectionProps {
     id?: string
-    title: string
-    description: string
-    className?: string
+    // title: string
+    // description: string
+    // className?: string
     children: React.ReactNode
 }
 
@@ -18,8 +18,8 @@ export interface SwiperProps {
 export interface ExperienceProps {
     avatar: string;
     name: string;
-    before?: string;
-    after?: string;
+    // before?: string;
+    // after?: string;
     description: string;
     testimonial?: string;
 }

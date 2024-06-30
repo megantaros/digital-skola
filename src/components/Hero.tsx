@@ -1,35 +1,38 @@
 import React, { memo } from 'react'
 import Image from "next/image";
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ subsets: ["latin"] });
 
 const Hero = () => {
     return (
-        <header className="lg:py-10 py-28 relative overflow-hidden">
+        <header className="lg:pt-14 pt-28 lg:pb-0 pb-10 relative overflow-hidden">
             <div className="container flex items-center justify-center min-h-screen">
                 <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-10 animate-fade-up">
-                    <div className="space-y-10 lg:order-first order-last">
-                        <h6 className="text-2xl font-semibold">
-                            Selamat Datang di
-                        </h6>
-                        <h1 className="lg:text-5xl text-4xl font-bold m-0">
+                    <div className="space-y-8 lg:order-first order-last">
+                        <div className="px-6 py-2 bg-blue-400 bg-opacity-30 text-blue-500 rounded-full w-fit">
+                            <h4 className={`${quicksand.className}`}>🔥 Digital Skola Bootcamp</h4>
+                        </div>
+                        <h1>
                             <span className="text-primary">Digital Marketing</span> Job Guarantee Bootcamp
                         </h1>
-                        <p className="text-gray-600 text-xl">
+                        <p className="text-gray-600 dark:text-gray-400 text-lg">
                             Raih karir impian dengan pelatihan intensif dan eksklusif bersama para high-achievers dengan jaminan 100% uang kembali.
                         </p>
                         <p className="font-semibold text-lg">
                             100% Alumni Job Guarantee Program telah bekerja di:
                         </p>
-                        <div className="flex items-center justify-center gap-10">
+                        <div className="flex items-center lg:justify-start justify-center gap-10">
                             <Image
                                 src="/images/brands/bukalapak.png"
-                                className="lg:h-[40px] h-[25px] w-auto hover:scale-105 duration-500"
+                                className="lg:h-[30px] h-[25px] w-auto hover:scale-105 duration-500"
                                 alt="Logo Bukalapak"
                                 width={250}
                                 height={250}
                             />
                             <Image
                                 src="/images/brands/gojek.png"
-                                className="lg:h-[40px] h-[25px] w-auto hover:scale-105 duration-500"
+                                className="lg:h-[30px] h-[25px] w-auto hover:scale-105 duration-500"
                                 alt="Logo Gojek"
                                 width={150}
                                 height={150}
@@ -41,8 +44,8 @@ const Hero = () => {
                             src="/images/hero.png"
                             className="drop-shadow-lg hover:scale-105 duration-500"
                             alt="Hero Images"
-                            width={600}
-                            height={600}
+                            width={500}
+                            height={500}
                         />
                     </div>
                 </div>

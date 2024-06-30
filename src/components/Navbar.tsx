@@ -38,14 +38,14 @@ const Navbar = () => {
     }, [])
 
     return (
-        <nav className={`bg-[#182B5C] ${isScroll ? 'dark:bg-card' : 'dark:bg-transparent'} text-white fixed top-0 w-full z-50`}>
+        <nav className={`bg-[#182B5C] ${isScroll ? 'dark:bg-card' : 'dark:bg-transparent'} text-white fixed top-0 w-full z-50 text-sm`}>
             <div className="container py-4 flex items-center justify-between ">
                 <div>
                     <Image
                         src="/brand-nav.png"
                         alt="Logo"
-                        width={280}
-                        height={280}
+                        width={240}
+                        height={240}
                         priority
                     />
                 </div>
@@ -123,7 +123,7 @@ const Navbar = () => {
                                             <DropdownMenuTrigger asChild>
                                                 <p className="flex justify-start text-primary hover:text-foreground font-medium cursor-pointer">Change Theme</p>
                                             </DropdownMenuTrigger>
-                                            <DropdownMenuContent align="start" className="w-80">
+                                            <DropdownMenuContent align="start" className="w-56">
                                                 <DropdownMenuItem onClick={() => setTheme("light")}>
                                                     Light
                                                 </DropdownMenuItem>

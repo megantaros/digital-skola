@@ -15,10 +15,10 @@ const AchieverItems: FC<AchieverItemsProps> = ({ data }) => {
         <Swiper
             slidesToShow={4}
             autoplay={true}
-            slidesToShowSm={2}
+            slidesToShowSm={1}
         >
             {data?.map((_, index) => (
-                <div key={index} className="p-4">
+                <div key={index} className="p-2">
                     <Card className="overflow-hidden border-none rounded-t-3xl">
                         <CardHeader className="p-0">
                             <div className="relative h-60 w-full bg-primary overflow-hidden rounded-b-3xl">
