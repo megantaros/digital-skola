@@ -9,8 +9,6 @@ const Hero = () => {
 
     const { theme } = useTheme();
 
-    console.log(theme);
-
     return (
         <header className="lg:pt-14 pt-28 lg:pb-0 pb-10 relative overflow-hidden">
             <div className="container flex items-center justify-center min-h-screen">
@@ -45,7 +43,7 @@ const Hero = () => {
                             />
                         </div>
                     </div>
-                    <div className="flex justify-end items-center">
+                    <div className="flex lg:justify-end justify-center items-center">
                         <Image
                             src="/images/hero.png"
                             className="drop-shadow-lg hover:scale-105 duration-500"

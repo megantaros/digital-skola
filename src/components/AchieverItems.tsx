@@ -13,7 +13,7 @@ import { FaLinkedin } from 'react-icons/fa';
 const AchieverItems: FC<AchieverItemsProps> = ({ data }) => {
     return (
         <Swiper
-            slidesToShow={4}
+            slidesToShow={3}
             autoplay={true}
             slidesToShowSm={1}
         >

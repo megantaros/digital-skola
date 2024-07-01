@@ -18,7 +18,7 @@ const quicksand = Quicksand({ subsets: ["latin"] });
 
 const ExperienceItems: FC<ExperienceItemsProps> = ({ data }) => {
   return (
-    <Swiper dots={false} autoplay={true}>
+    <Swiper dots={true} autoplay={true} slidesToShow={2}>
       {data?.map((_, index) => (
         <div key={index} className="p-2">
           <Card className="border-none">

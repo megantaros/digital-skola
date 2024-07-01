@@ -2,7 +2,7 @@ export interface SectionProps {
     id?: string
     // title: string
     // description: string
-    // className?: string
+    className?: string
     children: React.ReactNode
 }
 

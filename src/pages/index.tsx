@@ -7,6 +7,17 @@ import { Button } from "@/components/ui/button";
 import AchieverItems from "@/components/AchieverItems";
 import Head from "next/head";
 import Image from "next/image";
+import { ArrowDown } from "lucide-react";
+import Link from "next/link";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
 
 export default function Home({
   experiences,
@@ -26,30 +37,56 @@ export default function Home({
       <main className="min-h-screen">
         <Navbar />
         <Hero />
-        <Section id="experience">
-          <Image
-            src="/images/shapes/round.png"
-            className="absolute top-0 right-0 -z-1 opacity-10"
-            alt="Shapes Round"
-            width={600}
-            height={600}
-          />
-          <div className="space-y-2 my-10">
-            <h2 className="text-center">Pengalaman <span className="text-primary">Alumni</span></h2>
-            <h5 className="text-center font-medium">Apa kata mereka setelah mengikuti Bootcamp Digital Marketing Job Guarantee?</h5>
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-8 p-8">
+          <div className="lg:col-span-2 rounded-2xl overflow-hidden">
+            <Section id="experience">
+              <Image
+                src="/images/shapes/round.png"
+                className="absolute top-0 right-0 opacity-10"
+                alt="Shapes Round"
+                width={600}
+                height={600}
+              />
+              <div className="space-y-2 my-10">
+                <h2 className="text-center">Pengalaman <span className="text-primary">Alumni</span></h2>
+                <h5 className="text-center font-medium">Apa kata mereka setelah mengikuti Bootcamp Digital Marketing Job Guarantee?</h5>
+              </div>
+              <ExperienceItems data={experiences} />
+              <div className="flex justify-center my-10">
+                <Button size={'lg'} variant={`default`} className="text-lg p-7">Lihat Semua Pengalaman Alumni</Button>
+              </div>
+            </Section>
+            <Section id="achievers" className="pb-10">
+              <div className="space-y-2 my-10">
+                <h2 className="text-center">Belajar Digital Marketing<span className="text-primary"> Bersama High Achievers</span></h2>
+                <h5 className="text-center font-medium">Bergabunglah bersama para high achievers dan raih karir impianmu!</h5>
+              </div>
+              <AchieverItems data={achievers} />
+            </Section>
           </div>
-          <ExperienceItems data={experiences} />
-          <div className="flex justify-center my-10">
-            <Button size={'lg'} variant={`default`} className="text-lg p-7">Lihat Semua Pengalaman Alumni</Button>
-          </div>
-        </Section>
-        <Section id="achievers">
-          <div className="space-y-2 my-10">
-            <h2 className="text-center">Belajar Digital Marketing<span className="text-primary"> Bersama High Achievers</span></h2>
-            <h5 className="text-center font-medium">Bergabunglah bersama para high achievers dan raih karir impianmu!</h5>
-          </div>
-          <AchieverItems data={achievers} />
-        </Section>
+          <aside className="lg:col-span-1 lg:order-last order-first">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-primary mb-4">Promo</CardTitle>
+                <CardDescription className="rounded-lg overflow-hidden">
+                  <Image src="/images/hero.png" alt="Hero Images" width={500} height={500} />
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-[#182B5C] dark:text-white space-y-2">
+                <h2>Online Bootcamp</h2>
+                <h6 className="line-through text-destructive">Rp. 4.999.999</h6>
+                <div className="flex items-center gap-2">
+                  <div className="p-2 bg-red-400 bg-opacity-10 text-destructive rounded-lg">
+                    <span>22%</span>
+                  </div>
+                  <h6>Rp. 3.400.000</h6>
+                </div>
+                <Button size={'sm'} variant={`default`} className="w-full">Daftar Sekarang</Button>
+                <Button size={'sm'} variant={`default`} className="w-full bg-green-600 hover:bg-green-700">Klaim Discount</Button>
+              </CardContent>
+            </Card>
+          </aside>
+        </div>
         <footer className="bg-[#182B5C] dark:bg-gray-900 text-white py-10">
           <div className="container">
             <div className="text-center">
